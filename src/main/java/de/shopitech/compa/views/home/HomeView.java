@@ -1,4 +1,4 @@
-package de.shopitech.compa.views.helloworld;
+package de.shopitech.compa.views.home;
 
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -8,17 +8,19 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import de.shopitech.compa.views.MainLayout;
 
-@PageTitle("Hello World")
-@Route(value = "hello", layout = MainLayout.class)
+@PageTitle("Home")
+@Route(value = "home", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
-public class HelloWorldView extends HorizontalLayout {
+@AnonymousAllowed
+public class HomeView extends HorizontalLayout {
 
     private TextField name;
     private Button sayHello;
 
-    public HelloWorldView() {
+    public HomeView() {
         name = new TextField("Your name");
         sayHello = new Button("Say hello");
         sayHello.addClickListener(e -> {

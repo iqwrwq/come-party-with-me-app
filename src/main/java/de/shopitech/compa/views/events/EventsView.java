@@ -1,4 +1,4 @@
-package de.shopitech.compa.views.about;
+package de.shopitech.compa.views.events;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
@@ -8,12 +8,14 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 import de.shopitech.compa.views.MainLayout;
+import jakarta.annotation.security.PermitAll;
 
-@PageTitle("About")
-@Route(value = "about", layout = MainLayout.class)
-public class AboutView extends VerticalLayout {
+@PageTitle("Events")
+@Route(value = "events", layout = MainLayout.class)
+@PermitAll
+public class EventsView extends VerticalLayout {
 
-    public AboutView() {
+    public EventsView() {
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");
