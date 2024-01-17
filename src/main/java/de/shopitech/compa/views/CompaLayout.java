@@ -9,6 +9,7 @@ import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.server.auth.AccessAnnotationChecker;
@@ -35,9 +36,48 @@ public class CompaLayout extends AppLayout {
         setPrimarySection(Section.DRAWER);
 
         Image logo = new Image("images/Logo.png", "Come Party With Me");
-        addToDrawer(logo, new CompaNavigation(authenticatedUser, accessChecker), new CompaFooter());
+        logo.setWidth("75px");
+        logo.getStyle().setPadding("2rem 2rem 2rem 2rem");
+        Scroller scroller = new Scroller(new CompaNavigation(authenticatedUser, accessChecker));
+        addToDrawer(logo, scroller, createFooter());
         addHeaderContent();
 
+    }
+
+    private Footer createFooter() {
+        Footer layout = new Footer();
+
+        Optional<AppUser> maybeUser = authenticatedUser.get();
+        if (maybeUser.isPresent()) {
+            AppUser user = maybeUser.get();
+
+            Avatar avatar = new Avatar(user.getFirstName());
+            avatar.setThemeName("xsmall");
+            avatar.getElement().setAttribute("tabindex", "-1");
+
+            MenuBar userMenu = new MenuBar();
+            userMenu.setThemeName("tertiary-inline contrast");
+
+            MenuItem userName = userMenu.addItem("");
+            Div div = new Div();
+            div.add(avatar);
+            div.add(user.getFirstName());
+            div.add(new Icon("lumo", "dropdown"));
+            div.getElement().getStyle().set("display", "flex");
+            div.getElement().getStyle().set("align-items", "center");
+            div.getElement().getStyle().set("gap", "var(--lumo-space-s)");
+            userName.add(div);
+            userName.getSubMenu().addItem("Sign out", e -> {
+                authenticatedUser.logout();
+            });
+
+            layout.add(userMenu);
+        } else {
+            Anchor loginLink = new Anchor("login", "Sign in");
+            layout.add(loginLink);
+        }
+
+        return layout;
     }
 
     private void addHeaderContent() {

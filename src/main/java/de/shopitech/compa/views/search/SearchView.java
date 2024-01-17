@@ -8,10 +8,11 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import de.shopitech.compa.views.CompaLayout;
+import jakarta.annotation.security.PermitAll;
 
 @PageTitle("Suche")
 @Route(value = "search", layout = CompaLayout.class)
-@AnonymousAllowed
+@PermitAll
 @Uses(Icon.class)
 public class SearchView extends Composite<VerticalLayout> {
 

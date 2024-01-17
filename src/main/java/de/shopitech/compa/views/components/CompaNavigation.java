@@ -16,6 +16,7 @@ import de.shopitech.compa.views.messages.MessageView;
 import de.shopitech.compa.views.notifications.NotificationsView;
 import de.shopitech.compa.views.personform.PersonFormView;
 import de.shopitech.compa.views.profile.ProfileView;
+import de.shopitech.compa.views.register.RegisterView;
 import de.shopitech.compa.views.search.SearchView;
 import org.vaadin.lineawesome.LineAwesomeIcon;
 
@@ -88,6 +89,11 @@ public class CompaNavigation extends SideNav {
                 return;
             }
             addItem(new SideNavItem("Profil", LoginView.class, LineAwesomeIcon.USER.create()));
+        }
+
+        if (authenticatedUser.get().isEmpty()){
+            addItem(new SideNavItem("Login", LoginView.class, LineAwesomeIcon.SIGN_IN_ALT_SOLID.create()));
+            addItem(new SideNavItem("Register", RegisterView.class, LineAwesomeIcon.USER_PLUS_SOLID.create()));
         }
 
 
