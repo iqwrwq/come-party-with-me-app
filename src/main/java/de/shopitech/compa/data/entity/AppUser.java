@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Set;
@@ -22,10 +23,15 @@ public class AppUser {
     private UUID appUserId;
     private String firstName;
     private String lastName;
+    private String username;
     private String email;
     private String password;
-    private Date birthDate;
-    private Date creationDate;
+    private int eventsPlanned = 0;
+    private int follower = 0;
+    private int followed = 0;
+    private String bio = "This is my awesome profile, check it out!";
+    private LocalDate birthDate;
+    private LocalDate creationDate = LocalDate.now();
     private String profilePicture;
     private Set<AppUserRole> appUserRole;
     private String avatarUrl;

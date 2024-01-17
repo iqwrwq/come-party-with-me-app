@@ -33,49 +33,49 @@ public class CompaNavigation extends SideNav {
 
         if (accessChecker.hasAccess(HomeView.class)) {
             SvgIcon icon = LineAwesomeIcon.HOME_SOLID.create();
-            icon.setSize("32px");
+            icon.setClassName("compa-nav-menu--item--icon");
 
             addItem(new SideNavItem("Startseite", HomeView.class, icon));
         }
 
         if (accessChecker.hasAccess(SearchView.class)) {
             SvgIcon icon = LineAwesomeIcon.SEARCH_SOLID.create();
-            icon.setSize("32px");
+            icon.setClassName("compa-nav-menu--item--icon");
 
             addItem(new SideNavItem("Suchen", SearchView.class, icon));
         }
 
         if (accessChecker.hasAccess(DiscoverView.class)) {
             SvgIcon icon = LineAwesomeIcon.CALENDAR_CHECK_SOLID.create();
-            icon.setSize("32px");
+            icon.setClassName("compa-nav-menu--item--icon");
 
             addItem(new SideNavItem("Entdecken", DiscoverView.class, icon));
         }
 
         if (accessChecker.hasAccess(MessageView.class)) {
             SvgIcon icon = LineAwesomeIcon.PAPER_PLANE_SOLID.create();
-            icon.setSize("32px");
+            icon.setClassName("compa-nav-menu--item--icon");
 
             addItem(new SideNavItem("Nachrichten", MessageView.class, icon));
         }
 
         if (accessChecker.hasAccess(NotificationsView.class)) {
             SvgIcon icon = LineAwesomeIcon.HEART.create();
-            icon.setSize("32px");
+            icon.setClassName("compa-nav-menu--item--icon");
 
             addItem(new SideNavItem("Benachrichtigungen", NotificationsView.class, icon));
         }
 
         if (accessChecker.hasAccess(CreateEventView.class)) {
             SvgIcon icon = LineAwesomeIcon.PLUS_SQUARE_SOLID.create();
-            icon.setSize("32px");
+            icon.setClassName("compa-nav-menu--item--icon");
 
             addItem(new SideNavItem("Erstellen", CreateEventView.class, icon));
         }
 
         if (accessChecker.hasAccess(DeveloperDashboard.class)) {
             SvgIcon icon = LineAwesomeIcon.DEV.create();
-            icon.setSize("32px");
+            icon.setClassName("compa-nav-menu--item--icon");
 
             addItem(new SideNavItem("DEVELOPER", DeveloperDashboard.class, icon));
         }
@@ -84,7 +84,9 @@ public class CompaNavigation extends SideNav {
         if (accessChecker.hasAccess(ProfileView.class)) {
             if (authenticatedUser.get().isPresent()) {
                 Optional<AppUser> user = authenticatedUser.get();
-                addItem(new SideNavItem("Profil", ProfileView.class, new Avatar(user.get().getFirstName())));
+                Avatar avatarIcon =new Avatar(user.get().getFirstName());
+                avatarIcon.setClassName("compa-nav-menu--item--avatar-icon");
+                addItem(new SideNavItem("Profil", ProfileView.class, avatarIcon));
 
                 return;
             }
@@ -95,7 +97,5 @@ public class CompaNavigation extends SideNav {
             addItem(new SideNavItem("Login", LoginView.class, LineAwesomeIcon.SIGN_IN_ALT_SOLID.create()));
             addItem(new SideNavItem("Register", RegisterView.class, LineAwesomeIcon.USER_PLUS_SOLID.create()));
         }
-
-
     }
 }

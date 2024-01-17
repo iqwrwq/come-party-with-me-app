@@ -17,6 +17,7 @@ import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 import com.vaadin.flow.theme.lumo.LumoUtility.Padding;
 import de.shopitech.compa.views.CompaLayout;
@@ -24,7 +25,7 @@ import jakarta.annotation.security.PermitAll;
 
 @PageTitle("Register")
 @Route(value = "register", layout = CompaLayout.class)
-@PermitAll
+@AnonymousAllowed
 @Uses(Icon.class)
 public class RegisterView extends Composite<VerticalLayout> {
 

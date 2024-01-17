@@ -46,8 +46,12 @@ public class DefaultAdminService {
             AppUser adminUser = new AppUser();
             adminUser.setEmail(adminUsername);
             adminUser.setPassword(passwordEncoder.encode(adminPassword));
-            adminUser.setFirstName("ADMIN");
+            adminUser.setFirstName("Arthur");
             adminUser.setLastName("ADMIN");
+            adminUser.setUsername("the_nice_admin25");
+            adminUser.setFollower(420);
+            adminUser.setEventsPlanned(29);
+            adminUser.setFollowed(2);
             adminUser.setBannerUrl(getRandomUnsplashImageUrl());
             adminUser.setAppUserRole(Collections.singleton(AppUserRole.ADMIN));
 

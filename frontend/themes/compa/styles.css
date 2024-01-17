@@ -1,1 +1,260 @@
 @import url('./main-layout.css');
+
+* {
+    --lumo-base-color: #222831 !important;
+    --lumo-primary-text-color: #fdf6fd;
+    --lumo-shade-90pct: #fdf6fd;
+    --lumo-tint-5pct: #fdf6fd;
+    --lumo-primary-color: #00ADB5 !important;
+    --lumo-primary-color-50pct: #222831 !important;
+    --lumo-primary-color-10pct: #393E46 !important;
+    --lumo-primary-contrast-color: #222831 !important;
+
+}
+
+vaadin-text-area::part(input-field) {
+    border: none !important;
+    background-color: var(--lumo-shade-10pct);
+}
+
+html {
+    --lumo-base-color: #fff;
+    --lumo-tint-5pct: red !important;
+    --lumo-tint-10pct: red !important;
+    --lumo-tint-20pct: red !important;
+    --lumo-tint-30pct: hsla(0, 0%, 100%, 0.5);
+    --lumo-tint-40pct: hsla(0, 0%, 100%, 0.57);
+    --lumo-tint-50pct: hsla(0, 0%, 100%, 0.64);
+    --lumo-tint-60pct: #fdf6fd !important;
+    --lumo-tint-70pct: hsla(0, 0%, 100%, 0.77);
+    --lumo-tint-80pct: hsla(0, 0%, 100%, 0.84);
+    --lumo-tint-90pct: hsla(0, 0%, 100%, 0.9);
+    --lumo-tint: #fff;
+    --lumo-shade-5pct: #454e59 !important;
+    --lumo-shade-10pct: #454e59 !important;
+    --lumo-shade-20pct: #fdf6fd !important;
+    --lumo-shade-30pct: #fdf6fd !important;
+    --lumo-shade-40pct: #fdf6fd !important;
+    --lumo-shade-50pct: #fdf6fd !important;
+    --lumo-shade-60pct: #fdf6fd !important;
+    --lumo-shade-70pct: #fdf6fd !important;
+    --lumo-shade-80pct: #fdf6fd !important;
+    --lumo-shade-90pct: #fdf6fd !important;
+    --lumo-shade: #454e59 !important;
+    --lumo-contrast-5pct: #00ADB5 !important;
+    --lumo-contrast-10pct: var(--lumo-shade-10pct);
+    --lumo-contrast-20pct: var(--lumo-shade-20pct);
+    --lumo-contrast-30pct: var(--lumo-shade-30pct);
+    --lumo-contrast-40pct: var(--lumo-shade-40pct);
+    --lumo-contrast-50pct: var(--lumo-shade-50pct);
+    --lumo-contrast-60pct: var(--lumo-shade-60pct);
+    --lumo-contrast: #EEEEEE !important;
+    --lumo-header-text-color: var(--lumo-contrast);
+    --lumo-body-text-color: #fdf6fd !important;
+    --lumo-secondary-text-color: #fdf6fd !important;
+    --lumo-tertiary-text-color: var(--lumo-contrast-50pct);
+    --lumo-disabled-text-color: var(--lumo-contrast-30pct);
+    --lumo-primary-color: hsl(214, 100%, 48%);
+    --lumo-primary-color-50pct: hsla(214, 100%, 49%, 0.76);
+    --lumo-primary-color-10pct: hsla(214, 100%, 60%, 0.13);
+    --lumo-primary-text-color: hsl(214, 100%, 43%);
+    --lumo-primary-contrast-color: #fff;
+}
+
+.compa-nav-menu--item--icon {
+    width: 50px;
+    font-size: 22px;
+}
+
+.compa-nav-menu--item--avatar-icon {
+    margin: 0 3px 0 3px;
+    background-color: #00ADB5;
+    color: #fff;
+}
+
+.compa-nav-menu--item--avatar-icon:hover {
+    color: #222831 !important;
+}
+
+<!--
+
+.compa-profile-view {
+    width: 100%;
+    height: 100%;
+}
+
+.compa-profile-view--container {
+
+}
+
+.compa-profile-view--profile-name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.compa-profile-view--profile-name {
+    padding: 0 3rem 0 0;
+}
+
+.compa-profile-view--profile-edit-btn , .compa-profile-view--profile-settings-btn{
+    background-color:  var(--lumo-shade-10pct);
+}
+
+.compa-profile-view--profile-edit-btn:hover {
+    cursor: pointer;;
+}
+
+.compa-profile-view--profile-header {
+    width: 50vw;
+}
+
+.compa-profile-view--avatar-icon {
+    width: 12rem;
+    height: 12rem;
+}
+
+.vaadin-text-area-container {
+    width: 100%;
+}
+
+.compa-profile-view--user-bio-container{
+    width: 100%;
+}
+
+.compa-profile-view--bio-area{
+    width: 100%;
+    min-height: 6rem;
+}
+
+.compa-profile-view--tabsheet {
+    width: 60rem;
+}
+
+vaadin-input-container[readonly] [part='input-field'] {
+    border: 1px solid var(--lumo-contrast-30pct) !important;
+}
+
+
+.compa-weather-widget {
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    margin: 150px auto;
+    height: 90px;
+    width: 300px;
+    background-color: #F17022;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+.Circle1{
+    z-index: 100;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: -20px;
+    top: -30px;
+    border-radius: 50%;
+    background-color: rgba(253,184,19,1);
+    animation: enlarge;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.Circle2{
+    z-index: 80;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    right: -50px;
+    top: -70px;
+    border-radius: 50%;
+    background-color: rgba(246,140,31,0.7);
+
+    animation: enlarge;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.Circle3{
+    z-index: 50;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    right: -50px;
+    top: -100px;
+    border-radius: 50%;
+    background-color: rgba(241,125,45,0.7);
+
+    animation: enlarge;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+
+/*  CONTENT  */
+
+.sun{
+    z-index: 1000;
+    font-size: 15px !important;
+}
+
+.Condition{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    left: 20px;
+    top: 10px;
+}
+
+.Temp{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    left: 20px;
+    bottom: 5px;
+}
+
+.F{
+    z-index: 1000;
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+
+.Time{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    right: 20px;
+    top: 10px;
+}
+
+.locationIcon{
+    z-index: 1000;
+    font-size: 10px !important;
+}
+
+.Location{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    right: 20px;
+    bottom: 15px;
+}
+
+@keyframes enlarge{
+    50%{
+        transform: scale(1.2);
+    }
+}
