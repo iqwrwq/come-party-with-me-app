@@ -25,10 +25,10 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
-import de.shopitech.compa.views.MainLayout;
+import de.shopitech.compa.views.CompaLayout;
 
 @PageTitle("Person Form")
-@Route(value = "person-form", layout = MainLayout.class)
+@Route(value = "person-form", layout = CompaLayout.class)
 @AnonymousAllowed
 @Uses(Icon.class)
 public class PersonFormView extends Composite<VerticalLayout> {

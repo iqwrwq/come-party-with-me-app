@@ -7,11 +7,11 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
-import de.shopitech.compa.views.MainLayout;
+import de.shopitech.compa.views.CompaLayout;
 import jakarta.annotation.security.PermitAll;
 
 @PageTitle("Events")
-@Route(value = "events", layout = MainLayout.class)
+@Route(value = "events", layout = CompaLayout.class)
 @PermitAll
 public class EventsView extends VerticalLayout {
 

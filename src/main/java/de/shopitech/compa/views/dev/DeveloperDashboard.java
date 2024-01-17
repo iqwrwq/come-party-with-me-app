@@ -1,14 +1,14 @@
-package de.shopitech.compa.views.demoData;
+package de.shopitech.compa.views.dev;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.router.Route;
-import de.shopitech.compa.views.MainLayout;
+import de.shopitech.compa.views.CompaLayout;
 import jakarta.annotation.security.PermitAll;
 
-@Route(value = "developer-dashboard", layout = MainLayout.class)
+@Route(value = "developer-dashboard", layout = CompaLayout.class)
 @PermitAll
 public class DeveloperDashboard extends VerticalLayout {
 

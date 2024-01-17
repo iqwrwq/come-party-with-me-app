@@ -19,11 +19,11 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 import com.vaadin.flow.theme.lumo.LumoUtility.Padding;
-import de.shopitech.compa.views.MainLayout;
+import de.shopitech.compa.views.CompaLayout;
 import jakarta.annotation.security.PermitAll;
 
 @PageTitle("Register")
-@Route(value = "register", layout = MainLayout.class)
+@Route(value = "register", layout = CompaLayout.class)
 @PermitAll
 @Uses(Icon.class)
 public class RegisterView extends Composite<VerticalLayout> {

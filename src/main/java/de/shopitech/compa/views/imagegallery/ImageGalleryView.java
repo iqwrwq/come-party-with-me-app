@@ -13,10 +13,10 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.theme.lumo.LumoUtility.*;
-import de.shopitech.compa.views.MainLayout;
+import de.shopitech.compa.views.CompaLayout;
 
 @PageTitle("Image Gallery")
-@Route(value = "image-gallery", layout = MainLayout.class)
+@Route(value = "image-gallery", layout = CompaLayout.class)
 @AnonymousAllowed
 public class ImageGalleryView extends Main implements HasComponents, HasStyle {
 

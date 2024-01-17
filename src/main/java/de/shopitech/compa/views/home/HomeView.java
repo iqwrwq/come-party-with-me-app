@@ -9,11 +9,11 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
-import de.shopitech.compa.views.MainLayout;
+import de.shopitech.compa.views.CompaLayout;
 
 @PageTitle("Home")
-@Route(value = "home", layout = MainLayout.class)
-@RouteAlias(value = "", layout = MainLayout.class)
+@Route(value = "home", layout = CompaLayout.class)
+@RouteAlias(value = "", layout = CompaLayout.class)
 @AnonymousAllowed
 public class HomeView extends HorizontalLayout {
 

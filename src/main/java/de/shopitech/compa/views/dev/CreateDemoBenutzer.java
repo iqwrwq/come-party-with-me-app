@@ -1,4 +1,4 @@
-package de.shopitech.compa.views.demoData;
+package de.shopitech.compa.views.dev;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -16,12 +16,12 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.theme.lumo.LumoUtility.*;
-import de.shopitech.compa.views.MainLayout;
+import de.shopitech.compa.views.CompaLayout;
 
 import java.util.UUID;
 
 @PageTitle("Eventchat")
-@Route(value = "eventchat", layout = MainLayout.class)
+@Route(value = "eventchat", layout = CompaLayout.class)
 @AnonymousAllowed
 public class EventchatView extends HorizontalLayout {
 

@@ -1,4 +1,4 @@
-package de.shopitech.compa.views.demoData;
+package de.shopitech.compa.views.dev;
 
 import com.thedeanda.lorem.Lorem;
 import com.thedeanda.lorem.LoremIpsum;
